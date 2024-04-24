@@ -5,7 +5,6 @@ into the machine IP addresses
 • DNS is the backbone of the Internet
 • DNS uses hierarchical naming structure
 example.com
-.com
 api.example.com
 www.example.com
 
@@ -22,22 +21,22 @@ http://api.www.example.com.
 
 
 Amazon Route 53
-• A highly available, scalable, fully 
-managed and Authoritative DNS
-• Authoritative = the customer (you) 
-can update the DNS records 
+• A highly available, scalable, fully managed and Authoritative DNS
+• Authoritative = the customer (you) can update the DNS records 
 • Route 53 is also a Domain Registrar
-• Ability to check the health of your 
-resources
-• The only AWS service which 
-provides 100% availability SLA
-• Why Route 53? 53 is a reference to 
-the traditional DNS port
+• Ability to check the health of your resources
+• The only AWS service which provides 100% availability SLA
+
+• Why Route 53? 
+
+53 is a reference to the traditional DNS port
 
 
 
 Route 53 – Records
+
 • How you want to route traffic for a domain
+
 • Each record contains:
 • Domain/subdomain Name – e.g., example.com
 • Record Type – e.g., A or AAAA
@@ -129,13 +128,17 @@ Route 53 – Alias Records Targets
 
 Route 53 
 – Routing Policies
-• Define how Route 53 responds to DNS queries • Don’t get confused by the word “Routing” • It’s not the same as Load balancer routing which routes the traffic • DNS does not route any traffic, it only responds to the DNS queries • Route 53 Supports the following Routing Policies • Simple • Weighted • Failover • Latency based • Geolocation • Multi-Value Answer • Geoproximity (using Route 53 Tra
+• Define how Route 53 responds to DNS queries 
+• Don’t get confused by the word “Routing” 
+• It’s not the same as Load balancer routing which routes the traffic 
+• DNS does not route any traffic, it only responds to the DNS queries 
+• Route 53 Supports the following Routing Policies 
+
+• Simple • Weighted • Failover • Latency based • Geolocation • Multi-Value Answer • Geoproximity (using Route 53 Tra
                                                                                                                                                                                                                                                                                                                                                                                           
                                                                                                                                          Routing Policies – Simple
-• Typically, route traffic to a single 
-resource
-• Can specify multiple values in the 
-same record
+• Typically, route traffic to a single resource
+• Can specify multiple values in the same record
 • If multiple values are returned, a 
 random one is chosen by the client
 • When Alias enabled, specify only 
@@ -163,19 +166,11 @@ be returned equally
 Routing Policies 
 – Latency
 -based
-• Redirect to the resource that 
-has the least latency close to us
-• Super helpful when latency for 
-users is a priority 
-• Latency is based on traffic 
-between users and AWS 
-Regions
-• Germany users may be 
-directed to the US (if that’s the 
-lowest latency)
-• Can be associated with Health 
-Checks (has a failover 
-capability
+• Redirect to the resource that has the least latency close to us
+• Super helpful when latency for users is a priority 
+• Latency is based on traffic between users and AWS Regions
+• Germany users may be directed to the US (if that’s the lowest latency)
+• Can be associated with Health Checks (has a failover capability
 
 
 
