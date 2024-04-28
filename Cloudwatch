@@ -1,0 +1,51 @@
+Amazon CloudWatch Metrics :
+
+• CloudWatch provides metrics for every services in AWS
+• Metric is a variable to monitor (CPUUtilization, NetworkIn…)
+• Metrics belong to namespaces
+• Dimension is an attribute of a metric (instance id, environment, etc…).
+• Up to 10 dimensions per metric
+• Metrics have timestamps
+• Can create CloudWatch dashboards of metrics
+• Can create CloudWatch Custom Metrics (for the RAM for example)
+
+
+
+CloudWatch Logs :
+
+• Log groups: arbitrary name, usually representing an application
+• Log stream: instances within application / log files / containers
+• Can define log expiration policies (never expire, 30 days, etc..)
+• CloudWatch Logs can send logs to:
+    • Amazon S3 (exports)
+    • Kinesis Data Streams
+    • Kinesis Data Firehose
+    • AWS Lambda
+    • ElasticSearch
+
+
+
+CloudWatch Alarms :
+
+• Alarms are used to trigger notifications for any metric
+• Various options (sampling, %, max, min, etc…)
+
+• Alarm States:
+    • OK
+    • INSUFFICIENT_DATA
+    • ALARM
+
+• Period: 
+    • Length of time in seconds to evaluate the metric
+    • High resolution custom metrics: 10 sec, 30 sec or multiples of 60 sec
+
+
+
+CloudWatch Alarm Targets :
+
+• Stop, Terminate, Reboot, or Recover an EC2 Instance
+• Trigger Auto Scaling Action
+• Send notification to SNS (from which you can do pretty much anything)
+• Targets : Amazon EC2, EC2 Auto-Scaling, Amazon SNS etc.
+
+======================================================================================================================
